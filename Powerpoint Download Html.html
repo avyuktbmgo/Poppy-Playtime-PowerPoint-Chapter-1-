@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background with Image</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif; /* Default font-family */
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'); /* Import Roboto Medium font */
+
+        .background {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('Powerpoint games download site background_banner.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .top-center-container {
+            position: absolute;
+            top: 100px; /* Adjust this value to move the container down from the top */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px; /* Width of the top-center image */
+            height: 150px; /* Height of the top-center image */
+            display: block; /* Ensure block-level behavior for positioning */
+            position: relative; /* For positioning the rectangle below */
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
+        }
+
+        .top-center-image {
+            width: 100%; /* Full width of the container */
+            height: auto; /* Maintain aspect ratio */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Black shadow */
+            border: none; /* Remove any default borders */
+            display: block; /* Remove any inline element space */
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
+        }
+
+        .top-center-container:hover {
+            transform: translateX(-50%) scale(1.1); /* Scale up on hover */
+        }
+
+        .top-center-container:hover .top-center-image {
+            transform: scale(1); /* Ensure image scales with container */
+        }
+
+        .rectangle {
+            position: absolute;
+            bottom: 0; /* Start from the bottom of the container */
+            left: 0;
+            width: 100%; /* Match the width of the container */
+            height: 0; /* Initial height (hidden) */
+            background: rgb(28, 28, 28);
+            transition: height 0.3s ease; /* Smooth transition for the rectangle */
+            display: flex; /* Align text within the rectangle */
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 13px; /* Adjust font size as needed */
+            padding: 0 10px; /* Padding to ensure text fits well */
+            box-sizing: border-box; /* Include padding in width calculation */
+            overflow: hidden;
+            position: relative; /* For positioning the text animation */
+        }
+
+        .top-center-container:hover .rectangle {
+            height: 40px; /* Expand the rectangle height on hover */
+        }
+
+        .download-button {
+    position: absolute;
+    top: calc(100px + 150px + 60px); /* Positioned 3px below the top-center image */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: linear-gradient(to right, red, rgb(25, 48, 255)); /* Red to blue gradient */
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from text */
+    display: inline-block; /* Ensure button behaves like an inline element */
+}
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="top-center-container">
+            <img src="Poppy Playtime Chapter 1 Powerpoint.png" alt="Top Center Image" class="top-center-image">
+            <div class="rectangle">
+                <span>Poppy Playtime Chapter 1 Powerpoint</span>
+            </div>
+        </div>
+        <a href="https://drive.google.com/uc?export=download&id=1FEC7mMzD44AKiVKybCIKbnNBDJL_ulLN" class="download-button">Download</a>
+    </div>
+</body>
+</html>
